@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10091d">
+  <title>SHADOW LAUNCHER PRO 2.0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>SHADOW<span class="purple"> LAUNCHER</span><small>PRO 2.0</small></span></a>
+    <nav><a href="#features">Features</a><a href="#games">Games</a><a href="#downloads">Downloads</a></nav>
+    <button class="button button-outline" id="navAccount">Account</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR GAME. YOUR WORLD.</p>
+        <h1>ENTER THE<br><span class="gradient">SHADOW ZONE.</span></h1>
+        <p class="hero-text">A community gaming hub for discovering games, managing your profile and finding launcher updates.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="getStarted">GET STARTED <span>→</span></button>
+          <a class="button button-ghost" href="#features">EXPLORE FEATURES</a>
+        </div>
+        <p class="small-note">A fan-made gaming portal. Not affiliated with SKlauncher or Mojang.</p>
+      </div>
+      <div class="hero-art" aria-label="Abstract purple gaming artwork">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="game-card"><div class="game-card-top">SHADOW / 02</div><div class="cube">◆</div><div class="game-card-bottom"><b>READY TO PLAY?</b><span>YOUR NEXT ADVENTURE STARTS HERE</span></div></div>
+        <div class="float-tag">✦ PRO GAMING HUB</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b>01</b><span>YOUR PROFILE</span></div><div><b>02</b><span>GAME DISCOVERY</span></div><div><b>03</b><span>UPDATES & NEWS</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading"><p class="eyebrow">BUILT FOR PLAYERS</p><h2>Everything in <span class="purple">one place.</span></h2></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-icon">◈</span><h3>Player profile</h3><p>Keep your display name and account details in one dashboard.</p></article>
+        <article class="feature"><span class="feature-icon">▣</span><h3>Game discovery</h3><p>Explore game information and supported platforms.</p></article>
+        <article class="feature"><span class="feature-icon">⬇</span><h3>Downloads</h3><p>Find official download destinations and launcher updates.</p></article>
+      </div>
+    </section>
+
+    <section class="section game-section" id="games">
+      <div class="section-heading"><p class="eyebrow">DISCOVER</p><h2>Choose your <span class="purple">adventure.</span></h2></div>
+      <div class="game-grid">
+        <article class="game-tile"><div class="game-art art-minecraft">▦</div><h3>Minecraft</h3><p>Sandbox building and exploration.</p><a href="https://www.minecraft.net/" target="_blank" rel="noopener">Official website ↗</a></article>
+        <article class="game-tile"><div class="game-art art-creative">✧</div><h3>More games</h3><p>Add your favourite games here.</p><a href="#account">Open your account ↓</a></article>
+        <article class="game-tile"><div class="game-art art-community">◉</div><h3>Community</h3><p>Space for news, guides and updates.</p><a href="#features">Explore features ↓</a></article>
+      </div>
+    </section>
+
+    <section class="section download-section" id="downloads">
+      <div><p class="eyebrow">STAY UPDATED</p><h2>Downloads & <span class="purple">updates.</span></h2><p>Use official publisher websites for game downloads. The SHADOW LAUNCHER web portal does not install games on your device.</p></div>
+      <a class="button button-primary" href="https://www.minecraft.net/download" target="_blank" rel="noopener">MINECRAFT OFFICIAL DOWNLOAD ↗</a>
+    </section>
+
+    <section class="section account-section" id="account">
+      <div class="section-heading"><p class="eyebrow">PLAYER ACCESS</p><h2>Your <span class="purple">account.</span></h2></div>
+      <div class="account-layout">
+        <div class="panel auth-panel" id="authPanel">
+          <h3>Welcome, player.</h3><p class="muted">Sign in or create your SHADOW LAUNCHER account.</p>
+          <button class="button google-button" id="googleSignIn"><span class="google-g">G</span> Continue with Google</button>
+          <div class="separator"><span>OR WITH EMAIL</span></div>
+          <label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="At least 6 characters">
+          <div class="auth-actions"><button class="button button-primary" id="emailSignIn">SIGN IN</button><button class="button button-outline" id="emailRegister">CREATE ACCOUNT</button></div>
+          <p class="muted tiny">Use your own account. Never share your password or verification codes.</p>
+        </div>
+        <div class="panel dashboard-panel" id="dashboardPanel">
+          <div class="dashboard-head"><div><p class="eyebrow">PLAYER DASHBOARD</p><h3 id="welcomeName">Welcome!</h3><p class="muted" id="userEmail"></p></div><button class="button button-outline" id="signOut">SIGN OUT</button></div>
+          <div class="profile-row"><div class="avatar" id="avatar">S</div><div><b id="profileName">Player</b><p class="muted tiny">SHADOW PLAYER</p></div></div>
+          <label for="displayName">Display name</label><input id="displayName" maxlength="24" placeholder="Your player name">
+          <button class="button button-primary" id="saveProfile">SAVE PROFILE</button>
+          <div class="invite-box"><h4>RG invitation code</h4><p class="muted tiny">Enter a code provided by the site owner to unlock invited-member status.</p><div class="invite-row"><input id="inviteCode" placeholder="Enter invitation code"><button class="button button-outline" id="redeemCode">REDEEM</button></div><p class="tiny muted" id="inviteStatus">No code redeemed yet.</p></div>
+        </div>
+      </div>
+      <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">S</span><span>SHADOW<span class="purple"> LAUNCHER</span><small>PRO 2.0</small></span></a><p>© 2026 SHADOW LAUNCHER PRO 2.0 · Community gaming portal</p></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
